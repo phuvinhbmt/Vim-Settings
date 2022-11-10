@@ -11,3 +11,8 @@ These files should stay in your `$HOME` or `~/` directory
 # download vundle into ~/.vim/bundle on your machine
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
+
+Replace current vim settings with this repo settings (`.vimrc`, `.vim/`)
+```bash
+# Note: this will override your current vim settings
+cp ./.vim* $HOME/
