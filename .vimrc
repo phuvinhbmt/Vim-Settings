@@ -1,33 +1,6 @@
-"Vundle and Plugins installation ---------------------- {{{
-set nocompatible              " be iMproved, required
-filetype off                  " required
-
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
-"}}}
-
 "Basic settings ---------------------- {{{
+set nocompatible
+filetype off 
 
 " Reference: https://www.youtube.com/watch?v=n9k9scbTuvQ
 set relativenumber
@@ -48,16 +21,12 @@ set showmode
 
 " Reference: https://www.youtube.com/watch?v=nOhlk3mpgmM&list=PL3cu45aM3C2DJVGfCjSBB1yD9YkC7q27-&index=7
 "set tab size to 4 spaces
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
 "set tab to spac
-set expandtab
-set autoindent
-set smartindent
+"set expandtab
+"set autoindent
+"set smartindent
 
 set fileformat=unix
-set wildmode=longest,list,full "set autocompletion by ctrl + n
 colorscheme desert "set colorscheme
 "}}}
 
@@ -106,27 +75,6 @@ inoremap jk <esc>
 "inoremap <Up> <nop>
 "inoremap <Left> <nop>
 "inoremap <Right> <nop>
-"}}}
-
-"java file setting ---------------------- {{{
-augroup filetype_java
-    autocmd!
-
-    "soutln -> System.out.println();
-    autocmd FileType java :iabbrev <buffer> soutl System.out.println();<left><left>
-augroup END
-"}}}
-
-"python file setting ---------------------- {{{
-augroup filetype_python
-    autocmd!
-
-    " localleader c (normal): comment line
-    autocmd FileType python     nnoremap <buffer> <localleader>c I#<esc>
-
-   " iff -> if:
-    autocmd FileType python :iabbrev <buffer> iff if:<left>
-augroup END
 "}}}
 
 " Vimscript file settings ---------------------- {{{
